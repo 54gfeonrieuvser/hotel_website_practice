@@ -1,2 +1,2 @@
 # hotel_website_practice
-portfolio content 
+demo web learning skills
