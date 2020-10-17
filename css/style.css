@@ -23,7 +23,7 @@ header {
 
 @media screen and (min-width: 1025px) {
   header {
-    height: 10vh;
+    height: 12vh;
     -ms-grid-columns: 1fr 3fr 1fr;
         grid-template-columns: 1fr 3fr 1fr;
   }
@@ -32,8 +32,8 @@ header {
 @media screen and (max-width: 1024px) {
   header {
     height: 10vh;
-    -ms-grid-columns: 1fr 2fr 1fr;
-        grid-template-columns: 1fr 2fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -42,6 +42,66 @@ header {
     height: 10vh;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+  }
+}
+
+header .logo_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 1025px) {
+  header .logo_content img {
+    height: 12vh;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  header .logo_content img {
+    height: 10vh;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header .logo_content img {
+    height: 10vh;
+  }
+}
+
+@media screen and (min-width: 1250.1px) {
+  header .logo_content .logo_text {
+    display: inline;
+    line-height: 12vh;
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  header .logo_content .logo_text {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  header .logo_content .logo_text {
+    display: inline;
+    line-height: 10vh;
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header .logo_content .logo_text {
+    line-height: 10vh;
+    font-size: 1.5rem;
   }
 }
 
@@ -56,9 +116,7 @@ header nav {
 
 @media screen and (max-width: 1024px) {
   header nav {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    display: none;
   }
 }
 
@@ -88,9 +146,6 @@ header nav ul .drop_container {
 header nav ul .drop_container .drop_btn {
   display: block;
   text-align: center;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: black;
   text-decoration: none;
 }
 
@@ -99,14 +154,9 @@ header nav ul .drop_container .drop_btn {
     width: 125px;
     height: 60px;
     line-height: 60px;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  header nav ul .drop_container .drop_btn {
-    width: 90px;
-    height: 60px;
-    line-height: 60px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: black;
   }
 }
 
@@ -146,14 +196,6 @@ header nav ul .drop_container .drop_content a {
   }
 }
 
-@media screen and (max-width: 1024px) {
-  header nav ul .drop_container .drop_content a {
-    width: 120px;
-    height: 60px;
-    line-height: 60px;
-  }
-}
-
 header nav ul .drop_container .drop_content a:hover {
   background-color: #cccccc;
   font-weight: bold;
@@ -179,90 +221,120 @@ header #support_box {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-header #support_box button {
-  width: 150px;
-  height: 60px;
+header #support_box .book {
   background-color: #00deb6;
 }
 
-header #support_box button a {
+@media screen and (min-width: 1025px) {
+  header #support_box .book {
+    width: 150px;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  header #support_box .book {
+    width: 120px;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header #support_box .book {
+    width: 60px;
+    height: 40px;
+  }
+}
+
+header #support_box .book a {
   text-decoration: none;
   color: black;
   font-size: 2rem;
   display: block;
 }
 
-header #support_box button a:hover {
+@media screen and (max-width: 1024px) {
+  header #support_box .book a {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header #support_box .book a {
+    font-size: 1rem;
+  }
+}
+
+header #support_box .book a:hover {
   color: white;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-.logo_content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-@media screen and (min-width: 1025px) {
-  .logo_content img {
-    height: 10vh;
-  }
+header #support_box .burger {
+  display: none;
 }
 
 @media screen and (max-width: 1024px) {
-  .logo_content img {
-    height: 10vh;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .logo_content img {
-    height: 10vh;
-  }
-}
-
-.logo_content .logo_text {
-  font-size: 2rem;
-  line-height: 10vh;
-}
-
-@media screen and (max-width: 1024px) {
-  .logo_content .logo_text {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .logo_content .logo_text {
+  header #support_box .burger {
     display: block;
   }
 }
 
-.swiper-container {
-  padding: 0;
-  margin: 0;
+@media screen and (max-width: 1024px) {
+  header #support_box .burger {
+    width: 60px;
+    height: 60px;
+  }
+  header #support_box .burger img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header #support_box .burger {
+    width: 40px;
+    height: 40px;
+  }
+  header #support_box .burger img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .swiper-container {
+    margin-top: 12vh;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .swiper-container {
+    margin-top: 10vh;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .swiper-container {
+    margin-top: 10vh;
+  }
 }
 
 .swiper-container .swiper-slide img {
-  display: block;
-  height: 90vh;
-  height: 90vh;
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+@media screen and (min-width: 1025px) {
+  .swiper-container .swiper-slide img {
+    height: 88vh;
+  }
 }
 
 #bubble_container {

@@ -4,10 +4,10 @@ new Swiper('.swiper-container', {
   speed: 1200,
   effect: 'fade',
   // watchOverflow: true,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction:false
-  },
+  // autoplay: {
+  //   delay: 3000,
+  //   disableOnInteraction:false
+  // },
   // allowSlidePrev: false,
   // allowSlideNext: false, 
   // noSwiping: true,
